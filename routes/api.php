@@ -25,9 +25,6 @@ Route::group(['middleware' => ['cors','json.response']], function () {
                     //Logout authenticated user
                     Route::post('/logout', 'Auth\ApiAuthController@logout');
 
-                    //Token Refresh
-                    Route::post('/refresh', 'Auth\ApiAuthController@refresh');
-
                 }
             );
 
@@ -46,7 +43,7 @@ Route::group(['middleware' => ['cors','json.response']], function () {
                 {
                     //Show the user profile information
                     Route::get('/', 'UserController@index');
-                    
+
                 }
             );
 
